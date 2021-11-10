@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:new_batch_a/log_in.dart';
 import 'package:new_batch_a/profile.dart';
+import 'package:new_batch_a/quiz_page.dart';
 import 'package:slide_drawer/slide_drawer.dart';
 
 void main() {
@@ -76,6 +77,16 @@ class _MyHomePageState extends State<MyHomePage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
+
+              ElevatedButton(
+                  onPressed: (){
+                    Navigator.push(context,
+                        MaterialPageRoute(builder:
+                        (context)=>QuizPage()));
+                  },
+                  child: Text("Quiz Page")
+              ),
+
               ElevatedButton(
                   onPressed: (){
                     Navigator.push(context,
